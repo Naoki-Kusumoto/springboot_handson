@@ -10,22 +10,24 @@
     <p><a th:text="${url}" href="https://jsonplaceholder.typicode.com/todos/1}">URL</a>に対してGETリクエストを送信してみる</p>
     <div th:if="${currentUser}">
         <table border="1">
-            <tr>
-                <td>userId</td>
-                <td th:text="${currentUser.userId}">値1</td>
-            </tr>
-            <tr>
-                <td>id</td>
-                <td th:text="${currentUser.id}">値2</td>
-            </tr>
-            <tr>
-                <td>title</td>
-                <td th:text="${currentUser.title}">値2</td>    
-            </tr>
-            <tr>
-                <td>completed</td>
-                <td th:text="${currentUser.completed}">値2</td>    
-            </tr>
+            <tbody>
+                <tr>
+                    <td>userId</td>
+                    <td th:text="${currentUser.userId}">値1</td>
+                </tr>
+                <tr>
+                    <td>id</td>
+                    <td th:text="${currentUser.id}">値2</td>
+                </tr>
+                <tr>
+                    <td>title</td>
+                    <td th:text="${currentUser.title}">値2</td>    
+                </tr>
+                <tr>
+                    <td>completed</td>
+                    <td th:text="${currentUser.completed}">値2</td>    
+                </tr>
+            <tbody>
         </table>
     </div>
 </body>

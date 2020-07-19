@@ -7,22 +7,23 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
+@RequestMapping(value = "/json")
 public class AccessingJsonPlacefolderController {
 
-private final RestTemplate restTemplate = new RestTemplate();
+    private final RestTemplate restTemplate = new RestTemplate();
 
     // 外部サービスの URL 
     // JsonpraceFolder
     private final String url = "https://jsonplaceholder.typicode.com/todos/1";
 
     // 外部サービスの JSON を、そのまま（JSON のまま）返却。
-    @RequestMapping(value="/json/exchange")
+    @RequestMapping(value="/exchange")
         public ResponseEntity<String> exchange() {
         return restTemplate.exchange(url, HttpMethod.GET, null, String.class);
     }
 
     // 外部サービスの JSON を、一度オブジェクトにしてから返却。
-    @RequestMapping(value="/json/get-object")
+    @RequestMapping(value="/get-object")
         public RandomValue getObject() {
         return restTemplate.getForObject(url, RandomValue.class);
     }
