@@ -13,7 +13,7 @@ public class IndexController {
     private static final String url = "https://jsonplaceholder.typicode.com/todos/1";
     
     @GetMapping("/index")
-    public String test(Model model){
+    public String Todo(Model model){
         Todo user = restTemplate.getForObject(url, Todo.class);
         model.addAttribute("title", "Top Page");
         model.addAttribute("currentUser", user);
