@@ -15,7 +15,7 @@ public class UserInfo {
     @GetMapping("/other")
     public String Todo(Model model){
         Todo user = restTemplate.getForObject(url, Todo.class);
-        model.addAttribute("title", "Top Page");
+        model.addAttribute("title", "Other Page");
         model.addAttribute("currentUser", user);
         model.addAttribute("url", url);
 
