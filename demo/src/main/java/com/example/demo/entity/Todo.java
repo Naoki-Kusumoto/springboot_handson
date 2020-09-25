@@ -2,30 +2,24 @@ package com.example.demo.entity;
 
 
 public class Todo {
-    private String userId;
-    private String id;
+    private int userId;
+    private int id;
     private String title;
-	private String completed;
+	private Boolean completed;
 
-	private String name;
-	private String username;
-	
-	private Float lat;
-	private Float lng;
-
-	public String getUserId() {
+	public Integer getUserId() {
 		return this.userId;
 	}
 
-	public void setUserId(String userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 
-	public String getId() {
+	public Integer getId() {
 		return this.id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
@@ -37,45 +31,12 @@ public class Todo {
 		this.title = title;
 	}
 
-	public String getCompleted() {
+	public Boolean getCompleted() {
 		return this.completed;
 	}
 
-	public void setCompleted(String completed) {
+	public void setCompleted(Boolean completed) {
 		this.completed = completed;
 	}
-
-	public String getName() {
-		return this.name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getUsername() {
-		return this.username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
-
-	public Float getLat() {
-		return this.lat;
-	}
-
-	public void setLat(Float lat) {
-		this.lat = lat;
-	}
-
-	public Float getLng() {
-		return this.lng;
-	}
-
-	public void setLng(Float lng) {
-		this.lng = lng;
-	}
-    
 
 }

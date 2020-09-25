@@ -7,32 +7,31 @@
 
 <body>
     <h1 th:text="${title}">大見出し</h1>
-    <p><a th:text="${url}" href="https://jsonplaceholder.typicode.com/todos/1}">URL</a>に対してGETリクエストを送信してみる</p>
-    <div th:if="${currentUser}">
-        <table border="1">
-            <tbody>
-                <tr>
-                    <td>id</td>
-                    <td th:text="${currentUser.id}">値2</td>
-                </tr>
-                <tr>
-                    <td>name</td>
-                    <td th:text="${currentUser.name}">値2</td>
-                </tr>
-                <tr>
-                    <td>username</td>
-                    <td th:text="${currentUser.username}">値2</td>    
-                </tr>
-                <tr>
-                    <td>lat</td>
-                    <td th:text="${currentUser.lat}">値2</td>    
-                </tr>
-                <tr>
-                    <td>lng</td>
-                    <td th:text="${currentUser.lng}">値2</td>    
-                </tr>
+    <p><a th:text="${url}" th:href="${url}">URL</a>に対してGETリクエストを送信してみる</p>
+    <table  border="1">
+        <tbody>
+        <tr>
+            <td>id</td>
+            <td><p th:text="${UserInfo.id}"></p></td>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td><p th:text="${UserInfo.name}"></p></td>
+        </tr>
+        <tr>
+            <td>username</td>
+            <td><p th:text="${UserInfo.username}"></p></td>
+        </tr>
+        <tr>
+            <td>lat</td>
+            <td><p th:text="${UserInfo.address.geo.lat}"></p></td>
+        </tr>
+        <tr>
+            <td>lng</td>
+            <td><p th:text="${UserInfo.address.geo.lng}"></p></td>
+        </tr>
+        </tbody>
+    </table>
 
-            <tbody>
-        </table>
-    </div>
+
 </body>

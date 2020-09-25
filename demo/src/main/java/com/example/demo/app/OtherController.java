@@ -1,6 +1,6 @@
 package com.example.demo.app;
 
-import com.example.demo.entity.Todo;
+import com.example.demo.entity.User;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,18 +8,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.client.RestTemplate;
 
 @Controller
-public class IndexController {
+public class OtherController {
     private static final RestTemplate restTemplate = new RestTemplate();
-    private static final String url = "https://jsonplaceholder.typicode.com/todos/1";
+    private static final String url = "https://jsonplaceholder.typicode.com/users/1";
     
-    @GetMapping("/index")
+    @GetMapping("/other")
     public String todo(Model model){
-        Todo user = restTemplate.getForObject(url, Todo.class);
-        model.addAttribute("title", "Top Page");
-        model.addAttribute("currentUser", user);
+        User user = restTemplate.getForObject(url, User.class);
+        model.addAttribute("title", "Other Page");
+        model.addAttribute("UserInfo", user);
         model.addAttribute("url", url);
         
-        return "index";
+        return "other";
     }
-
 }
